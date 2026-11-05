@@ -15,7 +15,7 @@ const branches = [
 const grid=document.querySelector('#branch-grid');
 for(const [name,group,icon,subtitle,description] of branches){
  const card=document.createElement('a'); card.className='branch-card';card.dataset.group=group;
- card.href=`https://github.com/Endorys/platform/blob/main/docs/branches/${name.toLowerCase()}.md`;
+ card.href=`https://github.com/Endorys/platform/blob/main/${name.toLowerCase()}.md`;
  card.target='_blank';card.rel='noopener';
  card.innerHTML=`<div class="card-top"><span class="branch-icon" aria-hidden="true">${icon}</span><span class="arrow" aria-hidden="true">↗</span></div><span class="card-kicker">${subtitle}</span><h3>Endorys ${name}</h3><p>${description}</p>`;
  grid.append(card);
