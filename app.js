@@ -29,3 +29,16 @@ document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListen
 const toggle=document.querySelector('.menu-toggle'),navigation=document.querySelector('#navigation');
 toggle.addEventListener('click',()=>{const open=toggle.getAttribute('aria-expanded')!=='true';toggle.setAttribute('aria-expanded',String(open));navigation.classList.toggle('open',open);});
 navigation.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navigation.classList.remove('open');toggle.setAttribute('aria-expanded','false');}));
+const applicationData={
+ breast:{label:'ORIGINAL CLINICAL MOTIVATION',title:'Breast tissue research',intro:'Explore whether calibrated acoustic observations can support repeatable tissue characterization. This motivation predates the broader Endorys platform.',question:'Can acquisition and geometry effects be separated from a reproducible sample response?',evidence:'Phantom results first; any clinical study would need a defined intended use, expert oversight and the relevant approvals.',limit:'No screening, cancer detection or diagnostic performance is claimed.'},
+ superficial:{label:'CANDIDATE RESEARCH DIRECTION',title:'Superficial tissue research',intro:'Investigate accessible sensing locations, including forearm soft tissue, as a future setting for studying coupling, motion and repeatability.',question:'Can measurements remain repeatable across controlled changes in contact, placement and motion?',evidence:'A stable phantom reference and an assessment of sensing depth, geometry and confounding factors before any human study.',limit:'A superficial location does not establish clinical feasibility, elasticity measurement or safety.'},
+ procedural:{label:'LONGER-TERM APPLICATION CONCEPT',title:'Procedural tissue assessment',intro:'Explore whether localized sensing could eventually add useful tissue context to a clinician’s existing procedural workflow.',question:'What additional information would change a specific clinical decision, and can it be acquired reliably?',evidence:'Clinician-defined requirements, a validated sensing module and separate workflow, safety and clinical evaluations.',limit:'No surgical guidance capability, real-time diagnostic output or clinical deployment is available.'}
+};
+document.querySelectorAll('[data-application]').forEach(button=>button.addEventListener('click',()=>{
+ const data=applicationData[button.dataset.application];
+ document.querySelectorAll('[data-application]').forEach(item=>{item.classList.toggle('active',item===button);item.setAttribute('aria-pressed',String(item===button));});
+ const panel=document.querySelector('#application-detail');
+ panel.querySelector('.pill').textContent=data.label;panel.querySelector('h3').textContent=data.title;panel.querySelector('p').textContent=data.intro;
+ const descriptions=panel.querySelectorAll('dd');descriptions[0].textContent=data.question;descriptions[1].textContent=data.evidence;
+ panel.querySelector('.application-limit').textContent=data.limit;
+}));
