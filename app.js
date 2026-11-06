@@ -42,3 +42,7 @@ document.querySelectorAll('[data-application]').forEach(button=>button.addEventL
  const descriptions=panel.querySelectorAll('dd');descriptions[0].textContent=data.question;descriptions[1].textContent=data.evidence;
  panel.querySelector('.application-limit').textContent=data.limit;
 }));
+
+// Close the compact navigation on Escape and after leaving its breakpoint.
+document.addEventListener('keydown',event=>{if(event.key==='Escape'&&navigation.classList.contains('open')){navigation.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.focus();}});
+window.addEventListener('resize',()=>{if(window.innerWidth>760){navigation.classList.remove('open');toggle.setAttribute('aria-expanded','false');}});
