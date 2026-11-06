@@ -1,6 +1,6 @@
 # Endorys research website
 
-The public website for Endorys, an independent medical technology research programme founded by Sadhu Shobab Bollipo in Bengaluru, India. The programme investigates controlled acoustic measurement, conformal sensing and calibrated analysis.
+The public website for Endorys, an independent research and technology venture with selectively open documentation and reproducibility tools, founded by Sadhu Shobab Bollipo in Bengaluru, India. The programme investigates controlled acoustic measurement, conformal sensing and calibrated analysis.
 
 - Website: https://endorys.com/
 - Public research: https://github.com/Endorys/platform
@@ -12,6 +12,8 @@ The public website for Endorys, an independent medical technology research progr
 Endorys is at the pre-prototype stage. Architecture documentation, experimental plans and synthetic software examples support independent review. The immediate objective is the **Acoustic Reference Test (E001)**: establishing a reproducible acoustic baseline using a non-biological phantom. Public-facing pages use the descriptive name; protocol links, filenames, schemas and measurement records retain E001 for traceability. Physical and clinical performance remain to be established; no approved device, therapeutic efficacy, funding or partnership is implied. Concept illustrations are not prototypes or measured output.
 
 ## Selective openness
+
+The intended commercial model is paid R&D and potential licensing of separately developed, rights-cleared technology. This is a development direction; no proprietary product, paid offering or commercial revenue is established by this website.
 
 Selected protocols, research documentation and reproducibility tools are published under their explicit component licences. Future commercial implementations, hardware detail, firmware, partner work and datasets require review before publication. Existing licence grants remain in force; this policy does not impose new restrictions on licensed reuse.
 
