@@ -19,7 +19,9 @@ Keep confidential development in separate private repositories or appropriately 
 
 ## Website structure
 
-The site is static HTML/CSS/JavaScript. index.html is the homepage; overview.html is the venture overview. styles.css and app.js provide presentation and navigation. CNAME holds the custom domain. robots.txt and sitemap.xml support indexing. source-sans-3.woff2 is self-hosted under its bundled font licence. responsive-preview.html is a noindex layout preview, not a product interface.
+The site is static HTML/CSS/JavaScript. index.html is the compact homepage; technology.html, applications.html, research.html, about.html and contact.html contain focused details. site.css and site.js provide their shared presentation and navigation. research-library.html retains the full earlier research narrative and all 12 workstreams, using styles.css and app.js. overview.html remains the print-friendly venture overview. platform-architecture.svg is a native concept illustration, not a prototype or measured output.
+
+CNAME holds the custom domain. robots.txt and sitemap.xml support indexing. source-sans-3.woff2 is self-hosted under its bundled font licence. responsive-preview.html and homepage-preview.html are noindex QA previews, not product interfaces. Older homepage section URLs are routed to their relevant detail pages by site.js.
 
 Serve the repository root with a local static server to inspect changes. Verify local links, navigation, keyboard access, narrow-screen layout, image disclosures and factual claims before publishing. Preserve asset notices and existing valid permissions.
 

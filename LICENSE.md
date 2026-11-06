@@ -4,7 +4,7 @@ Clarified 6 November 2026. This notice applies to the Endorys/endorys.github.io 
 
 ## Original website source and text
 
-Copyright 2026 Sadhu Shobab Bollipo, to the extent copyright applies and the relevant rights are held. Original website HTML, CSS, JavaScript and text are reserved unless a file or component carries an explicit separate licence. No blanket open-source or Creative Commons licence is granted to this website repository by this notice.
+Copyright 2026 Sadhu Shobab Bollipo, to the extent copyright applies and the relevant rights are held. Original website HTML, CSS, JavaScript, SVG illustration source and text are reserved unless a file or component carries an explicit separate licence. No blanket open-source or Creative Commons licence is granted to this website repository by this notice.
 
 Normal browsing and linking are welcome. GitHub's applicable terms permit viewing and forking a public repository. Those permissions do not themselves grant unrestricted commercial reuse of every asset. For reuse beyond existing permissions, contact sadhu.shobab@gmail.com with the specific material and intended use.
 
