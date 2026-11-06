@@ -9,7 +9,7 @@ The public website for Endorys, an independent medical technology research progr
 
 ## Current stage
 
-Endorys is at the pre-prototype stage. Architecture documentation, experimental plans and synthetic software examples support independent review. The immediate objective is a reproducible acoustic phantom experiment. Physical and clinical performance remain to be established; no approved device, therapeutic efficacy, funding or partnership is implied. Concept illustrations are not prototypes or measured output.
+Endorys is at the pre-prototype stage. Architecture documentation, experimental plans and synthetic software examples support independent review. The immediate objective is the **Acoustic Reference Test (E001)**: establishing a reproducible acoustic baseline using a non-biological phantom. Public-facing pages use the descriptive name; protocol links, filenames, schemas and measurement records retain E001 for traceability. Physical and clinical performance remain to be established; no approved device, therapeutic efficacy, funding or partnership is implied. Concept illustrations are not prototypes or measured output.
 
 ## Selective openness
 
