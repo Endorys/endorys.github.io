@@ -1,6 +1,6 @@
 # Endorys research website
 
-Informational website for Endorys, an independent ultrasound-led multiphysics research initiative founded by Sadhu Shobab Bollipo in Bengaluru, India.
+The public website for Endorys, an independent medical technology research programme founded by Sadhu Shobab Bollipo in Bengaluru, India. The programme investigates controlled acoustic measurement, conformal sensing and calibrated analysis.
 
 - Website: https://endorys.com/
 - Public research: https://github.com/Endorys/platform
@@ -9,7 +9,7 @@ Informational website for Endorys, an independent ultrasound-led multiphysics re
 
 ## Current stage
 
-Pre-prototype research and synthetic software demonstrations. The immediate goal is a reproducible acoustic phantom experiment. No integrated physical or clinical performance, approved medical device, therapeutic efficacy, funding or partnership is established by this site. Concept illustrations are not prototypes or measured output.
+Endorys is at the pre-prototype stage. Architecture documentation, experimental plans and synthetic software examples support independent review. The immediate objective is a reproducible acoustic phantom experiment. Physical and clinical performance remain to be established; no approved device, therapeutic efficacy, funding or partnership is implied. Concept illustrations are not prototypes or measured output.
 
 ## Selective openness
 
@@ -33,4 +33,4 @@ No analytics, account system or submission backend is intentionally implemented 
 
 ## Contact
 
-For research collaboration or a scoped engineering conversation: sadhu.shobab@gmail.com. Begin with a non-confidential description. An enquiry does not itself create an NDA, partnership or commercial agreement.
+For independent protocol review, laboratory collaboration or a defined engineering enquiry: sadhu.shobab@gmail.com. Begin with a non-confidential description. An enquiry does not itself create an NDA, partnership or commercial agreement.
