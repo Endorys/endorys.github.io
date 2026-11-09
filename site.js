@@ -1,11 +1,21 @@
 const menu=document.querySelector('.menu-button');
 const navigation=document.querySelector('#primary-navigation');
 if(menu&&navigation){
- const close=()=>{menu.setAttribute('aria-expanded','false');navigation.classList.remove('is-open');};
- menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));navigation.classList.toggle('is-open',open);});
+ const header=menu.closest('header');
+ const isOpen=()=>menu.getAttribute('aria-expanded')==='true';
+ const setOpen=open=>{
+  menu.setAttribute('aria-expanded',String(open));
+  navigation.classList.toggle('is-open',open);
+  menu.querySelector('span').textContent=open?'−':'＋';
+ };
+ const close=()=>setOpen(false);
+ document.documentElement.classList.add('nav-enhanced');
+ menu.addEventListener('click',()=>setOpen(!isOpen()));
  navigation.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));
- document.addEventListener('keydown',e=>{if(e.key==='Escape'&&menu.getAttribute('aria-expanded')==='true'){close();menu.focus();}});
- window.addEventListener('resize',()=>{if(innerWidth>800)close();});
+ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&isOpen()){close();menu.focus();}});
+ document.addEventListener('click',e=>{if(isOpen()&&!header.contains(e.target))close();});
+ header.addEventListener('focusout',e=>{if(e.relatedTarget&&!header.contains(e.relatedTarget))close();});
+ matchMedia('(min-width: 801px)').addEventListener('change',close);
 }
 // Retain previously shared homepage section URLs after moving details to pages.
 if(location.pathname==='/'||location.pathname.endsWith('/index.html')){

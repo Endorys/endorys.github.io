@@ -26,9 +26,6 @@ document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListen
  let n=0;document.querySelectorAll('.branch-card').forEach(card=>{card.hidden=filter!=='all'&&card.dataset.group!==filter;if(!card.hidden)n++;});
  document.querySelector('#branch-count').textContent=filter==='all'?'Showing all 12 research workstreams.':`Showing ${n} research workstreams.`;
 }));
-const toggle=document.querySelector('.menu-toggle'),navigation=document.querySelector('#navigation');
-toggle.addEventListener('click',()=>{const open=toggle.getAttribute('aria-expanded')!=='true';toggle.setAttribute('aria-expanded',String(open));navigation.classList.toggle('open',open);});
-navigation.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navigation.classList.remove('open');toggle.setAttribute('aria-expanded','false');}));
 const applicationData={
  breast:{label:'FOUNDING RESEARCH FOCUS',title:'Breast tissue research',intro:'Investigate the measurement requirements for repeatable acoustic characterization of tissue response. Breast assessment is the original motivation for Endorys.',question:'Can a consistent sample response be distinguished from changes in acquisition conditions and sensor geometry?',evidence:'A reproducible phantom baseline, followed by a defined intended use and an appropriately designed study with expert oversight and relevant approvals.',limit:'No screening, cancer detection or diagnostic performance is claimed.'},
  superficial:{label:'CANDIDATE RESEARCH DIRECTION',title:'Superficial tissue research',intro:'Accessible soft-tissue locations, including the forearm, are candidates for investigating contact, placement and motion as sources of measurement variation.',question:'How do contact, placement and motion affect measurement repeatability?',evidence:'A stable acoustic reference, an assessment of sensing depth and controls for confounding factors before any human study.',limit:'Clinical feasibility, elasticity measurement and safety require separate evaluation.'},
@@ -42,7 +39,3 @@ document.querySelectorAll('[data-application]').forEach(button=>button.addEventL
  const descriptions=panel.querySelectorAll('dd');descriptions[0].textContent=data.question;descriptions[1].textContent=data.evidence;
  panel.querySelector('.application-limit').textContent=data.limit;
 }));
-
-// Close the compact navigation on Escape and after leaving its breakpoint.
-document.addEventListener('keydown',event=>{if(event.key==='Escape'&&navigation.classList.contains('open')){navigation.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.focus();}});
-window.addEventListener('resize',()=>{if(window.innerWidth>760){navigation.classList.remove('open');toggle.setAttribute('aria-expanded','false');}});
