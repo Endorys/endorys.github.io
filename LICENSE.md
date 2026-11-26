@@ -30,3 +30,12 @@ All showcased product visuals are concept illustrations, not prototypes or measu
 ## Publication policy
 
 Endorys uses [selective openness](https://github.com/Endorys/platform/blob/main/OPENNESS.md): selected research is public under explicit terms; future commercial engineering is reviewed separately before release. This is a publication policy, not a restriction on reuse already permitted by an applicable licence.
+
+Apache License, Version 2.0 (Apache-2.0)
+Copyright (c) 2026 Sadhu Shobab Bollipo trading as M/s Endorys (UDYAM-KR-03-0786660)
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://apache.org
+
+EXPLICIT HARDWARE AND SYSTEM PATENT RESERVATION (IN 202641134091):
+Notwithstanding Section 3 of the Apache License, Version 2.0, no express or implied license is granted under any patent claims covering physical conformable ultrasound transducer arrays, segmented living-hinge carrier substrates, impedance-matched solid hydrogel or pressure-regulated assisted-coupling interfaces, or closed-loop hardware switching apparatus claimed in Indian Patent Application No. 202641134091 and its international PCT or national phase counterparts. Commercial hardware or clinical SaMD licensing inquiries: sadhu.shobab@gmail.com | https://endorys.com
+
