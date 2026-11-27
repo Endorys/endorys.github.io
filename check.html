@@ -1,43 +1,101 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#082c3c"><title>CQI Simulator | ENDORYS&trade;</title>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#003c3c"><title>CQI Simulator &amp; Repeatability Lab | ENDORYS&trade;</title>
 <link rel="icon" href="Endorys_TM2.jpg"><link rel="preload" href="source-sans-3.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="site.css?v=20261106-mature1"><script src="site.js?v=20261109-ui" defer></script>
+<link rel="stylesheet" href="site.css?v=20261109-mature1"><script src="site.js?v=20261109-ui" defer></script>
+<script src="check-sim.js?v=20261127" defer></script>
 <link rel="stylesheet" href="site-ui.css?v=20261109-ui"><style>
-.sim-card{background:#fff;border:1px solid #d8e1e8;border-radius:10px;padding:1.75rem;margin-bottom:1.75rem}
-.slider-bar{display:flex;align-items:center;gap:1rem;margin:1.25rem 0;font-size:.95rem}.slider-bar input{flex:1;accent-color:#082c3c}
-.sim-canvas{width:100%;height:240px;background:#f7fafc;border:1px solid #cbd5e1;border-radius:8px;display:block}
-.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-top:1.25rem}
-.kpi-box{background:#f7fafc;border:1px solid #d8e1e8;border-radius:8px;padding:1rem;text-align:center}
-.kpi-label{font-size:.82rem;color:#475569;margin-bottom:.25rem}.kpi-val{font-size:1.3rem;font-weight:700;color:#082c3c}
-.pass{color:#047857}.fail{color:#b91c1c}.btn-sim{background:#082c3c;color:#fff;border:none;padding:.55rem 1rem;border-radius:6px;font-weight:600;cursor:pointer;margin-right:.5rem}
-.btn-sim.alt{background:#eef2f6;color:#082c3c;border:1px solid #cbd5e1}.audit-out{margin-top:1rem;padding:.85rem 1rem;border-radius:6px;background:#f7fafc;border:1px solid #cbd5e1;font-weight:600;color:#082c3c}
+.sim-card{background:#fff;border:1px solid #d0e2e2;border-radius:14px;padding:1.5rem;margin-bottom:1.5rem}
+.ctrl-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin:1rem 0 1.25rem}
+.ctrl-box{background:#f7fbfb;border:1px solid #d5e6e6;border-radius:10px;padding:.85rem 1rem}
+.ctrl-head{display:flex;justify-content:space-between;font-size:.9rem;font-weight:700;color:#0f2d2d;margin-bottom:.4rem}
+.ctrl-box input[type=range]{width:100%;accent-color:#002c3c;cursor:pointer}
+.sim-canvas{width:100%;height:250px;background:#f7fafc;border:1px solid #cbd8de;border-radius:10px;display:block}
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:.85rem;margin-top:1.15rem}
+.kpi-box{background:#f7fafc;border:1px solid #d6e2e8;border-radius:10px;padding:.9rem;text-align:center}
+.kpi-label{font-size:.8rem;color:#475569;margin-bottom:.25rem}
+.kpi-val{font-size:1.3rem;font-weight:700;color:#002c3c}
+.pass{color:#047857}.fail{color:#b91c1c}
+.btn-sim{background:#002c3c;color:#fff;border:none;padding:.6rem 1rem;border-radius:8px;font-weight:600;cursor:pointer;margin-right:.5rem;margin-bottom:.4rem}
+.btn-sim.alt{background:#eef2f6;color:#002c3c;border:1px solid #cbd8de}
+.audit-out{margin-top:1rem;padding:.9rem;border-radius:8px;background:#f8fafc;border:1px solid #cbd8de;font-size:.92rem}
+.roi-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1rem;margin-top:1rem}
+.roi-card{border:1px solid #d5e6e6;border-radius:10px;padding:1rem;background:#fbfdfd}
 </style></head><body><a class="skip-link" href="#main">Skip to content</a>
-<header class="header"><div class="shell header-inner"><a href="index.html" class="brand"><img src="endorys-icon.png" alt="" width="36" height="36"><span>ENDORYS&trade;</span></a>
-<button class="menu-button" aria-expanded="false" aria-controls="primary-navigation">Menu <span>＋</span></button>
-<nav id="primary-navigation"><a href="technology.html">Technology</a><a href="applications.html">Applications</a><a href="research.html">Research</a><a href="check.html" aria-current="page">CQI Simulator</a><a href="about.html">About</a><a class="nav-contact" href="contact.html">Contact ↗</a></nav></div></header>
-<main id="main" tabindex="-1"><section class="page-hero shell"><span class="eyebrow">E001 INTERACTIVE BENCHMARK &middot; PATENT PENDING (IN 202641134091)</span>
-<h1>Coupling Quality Index (CQI)<br>&amp; Repeatability Simulator.</h1>
-<p class="lead">Test how interfacial air-gap faults corrupt 1.7 MHz curved-surface quantitative ultrasound—and how deterministic sequential gating isolates valid frames (<a href="https://doi.org" target="_blank" rel="noopener">Zenodo DOI: 10.5281/zenodo.24555614 &#8599;</a>).</p></section>
-<section class="shell content-section"><div class="sim-card"><h2>1. Curved-Surface Coupling Simulator (1.7 MHz)</h2>
-<div class="slider-bar"><strong>0.6 mm Air-Gap</strong><input type="range" id="sl" min="0" max="100" value="100"><strong>3 mm Hydrogel Coupling</strong></div>
-<canvas class="sim-canvas" id="cv" width="880" height="240"></canvas>
-<div class="kpi-grid"><div class="kpi-box"><div class="kpi-label">Boundary Reflection (5.8 &mu;s)</div><div class="kpi-val" id="v1">1.80 kPa</div></div>
-<div class="kpi-box"><div class="kpi-label">Subsurface Target Echo (16.0 &mu;s)</div><div class="kpi-val" id="v2">4.37 kPa</div></div>
-<div class="kpi-box"><div class="kpi-label">ENDORYS&trade; CQI Gate Status</div><div class="kpi-val pass" id="v3">ACCEPTED (0.94)</div></div></div></div>
-<div class="sim-card"><h2>2. Client-Side RF Waveform CSV Audit</h2>
-<button class="btn-sim" onclick="demo(true)">Load Assisted Hydrogel CSV</button><button class="btn-sim alt" onclick="demo(false)">Load Air-Gap Fault CSV</button>
-<input type="file" id="fi" accept=".csv"><div class="audit-out" id="out">Select a sample trace or upload a two-column time_us,pressure CSV waveform.</div></div></section></main>
+<header class="header"><div class="shell header-inner"><a href="index.html" class="brand" aria-label="Endorys home"><img src="endorys-icon.png" alt="" width="36" height="36"><span>ENDORYS&trade;</span></a>
+<button class="menu-button" aria-expanded="false" aria-controls="primary-navigation">Menu <span aria-hidden="true">+</span></button>
+<nav id="primary-navigation" aria-label="Main navigation"><a href="technology.html">Technology</a><a href="applications.html">Applications</a><a href="research.html">Research</a><a href="check.html" aria-current="page">CQI Simulator</a><a href="about.html">About</a><a class="nav-contact" href="contact.html">Contact <span aria-hidden="true">/</span></a></nav></div></header>
+<main id="main" tabindex="-1"><section class="page-hero shell"><span class="eyebrow">INTERACTIVE BENCHMARK &middot; PATENT PENDING (IN 202641134091)</span>
+<h1>Coupling Quality Index (CQI) &amp; Repeatability Simulator</h1>
+<p class="lead">Model how curvature, interfacial air-gap voids, and impedance-matched coupling (~1.50 MRayl) govern 1.7 MHz curved-surface quantitative ultrasound repeatability (<a href="https://doi.org" target="_blank" rel="noopener">Zenodo DOI: 10.5281/zenodo.24555614</a>).</p></section>
+
+<section class="shell content-section">
+<div class="sim-card">
+  <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:.5rem">
+    <h2 style="margin:0">1. Multi-Parameter Curved Surface Coupling Simulator (1.7 MHz)</h2>
+    <div>
+      <button class="btn-sim alt" onclick="preset('unassisted')">Preset: Unassisted Handheld</button>
+      <button class="btn-sim" onclick="preset('assisted')">Preset: ENDORYS&trade; Assisted</button>
+    </div>
+  </div>
+  <div class="ctrl-grid">
+    <div class="ctrl-box">
+      <div class="ctrl-head"><span>Coupling Gel / Hydrogel</span><span id="sl-v">6.0 mm</span></div>
+      <input type="range" id="sl" min="0" max="100" value="100" oninput="draw()">
+    </div>
+    <div class="ctrl-box">
+      <div class="ctrl-head"><span>Surface Curvature Radius (R)</span><span id="rad-v">45 mm (Curved)</span></div>
+      <input type="range" id="rad" min="30" max="150" value="45" oninput="draw()">
+    </div>
+    <div class="ctrl-box">
+      <div class="ctrl-head"><span>Interfacial Air-Gap Void</span><span id="gap-v">2 &mu;m</span></div>
+      <input type="range" id="gap" min="0" max="40" value="2" oninput="draw()">
+    </div>
+  </div>
+  <canvas id="cv" class="sim-canvas" width="900" height="250"></canvas>
+  <div class="kpi-grid">
+    <div class="kpi-box"><div class="kpi-label">Effective Interface Z</div><div class="kpi-val" id="z-val">1.49 MRayl</div></div>
+    <div class="kpi-box"><div class="kpi-label">Boundary Reflection (3.8 &mu;s)</div><div class="kpi-val" id="v1">1.80 kPa</div></div>
+    <div class="kpi-box"><div class="kpi-label">Subsurface Echo (16.0 &mu;s)</div><div class="kpi-val" id="v2">4.27 kPa</div></div>
+    <div class="kpi-box"><div class="kpi-label">CQI Score (0.00&ndash;1.00)</div><div class="kpi-val" id="cqi-val">0.84</div></div>
+    <div class="kpi-box"><div class="kpi-label">ENDORYS&trade; Gate Status</div><div class="kpi-val pass" id="v3">ACCEPTED</div></div>
+  </div>
+</div>
+
+<div class="sim-card">
+  <h2 style="margin-top:0">2. Clinical Repeatability (CV%) &amp; Workflow Impact Estimator</h2>
+  <p style="color:#475569;margin-bottom:.75rem">Translates real-time boundary coupling stability above into projected Speed-of-Sound (SoS) measurement variance and clinical throughput across 100 quantitative exams.</p>
+  <div class="roi-row">
+    <div class="roi-card">
+      <div class="kpi-label">Projected SoS Repeatability (CV%)</div>
+      <div class="kpi-val" id="cv-pct">1.6%</div>
+      <div style="font-size:.82rem;color:#64748b;margin-top:.25rem">QIBA PEQUS Target: &le; 2.0% CV</div>
+    </div>
+    <div class="roi-card">
+      <div class="kpi-label">Repeat Acquisitions Needed</div>
+      <div class="kpi-val" id="re-scans">1.0x (Single Pass)</div>
+      <div style="font-size:.82rem;color:#64748b;margin-top:.25rem">Unassisted curved baseline: ~2.4x</div>
+    </div>
+    <div class="roi-card">
+      <div class="kpi-label">Operator Time Saved / 100 Exams</div>
+      <div class="kpi-val pass" id="time-saved">+11.5 hrs</div>
+      <div style="font-size:.82rem;color:#64748b;margin-top:.25rem">Eliminates manual re-gel &amp; drift retries</div>
+    </div>
+  </div>
+</div>
+
+<div class="sim-card">
+  <h2 style="margin-top:0">3. Client-Side RF Waveform CSV Audit</h2>
+  <button class="btn-sim" onclick="demo(true)">Load Assisted Hydrogel CSV</button>
+  <button class="btn-sim alt" onclick="demo(false)">Load Air-Gap Fault CSV</button>
+  <input type="file" id="fi" accept=".csv">
+  <div class="audit-out" id="out">Select a sample trace or upload a two-column <code>time_us,pressure</code> CSV waveform.</div>
+</div>
+</section></main>
+
 <footer class="footer"><div class="shell"><div class="footer-top"><div><a class="brand" href="index.html"><img src="endorys-icon.png" alt="" width="30" height="30"><span>ENDORYS&trade;</span></a><p>Engineering deeper tissue understanding.</p></div>
-<nav><a href="overview.html">Venture overview</a><a href="research-library.html">Research library</a><a href="check.html">CQI Simulator</a><a href="https://doi.org" target="_blank" rel="noopener">Zenodo Benchmark (DOI) &#8599;</a><a href="https://github.com" target="_blank" rel="noopener">Research on GitHub &#8599;</a><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn &#8599;</a><a href="https://github.com/blob/main/LICENSE.md" target="_blank" rel="noopener">Rights &amp; licensing &#8599;</a></nav></div>
-<div class="footer-bottom"><span>&copy; 2026 M/s Endorys (Udyam MSME: UDYAM-KR-03-0786660) &middot; Bengaluru, India &middot; Patent Pending (IN 202641134091)</span><span>Research-stage programme. ENDORYS&trade; is a trademark of Sadhu Shobab Bollipo trading as M/s Endorys. No clinical medical device is offered for sale.</span></div></div></footer>
-<script>const sl=document.getElementById("sl"),cv=document.getElementById("cv"),cx=cv.getContext("2d");
-function draw(){const q=sl.value/100,r=(10.2*(1-q)+1.8*q).toFixed(2),b=(1.05*(1-q)+4.37*q).toFixed(2),cqi=(b/(+b + +r*0.15)).toFixed(2);
-document.getElementById("v1").textContent=r+" kPa";document.getElementById("v2").textContent=b+" kPa";const g=document.getElementById("v3");
-g.textContent=q>=0.65?"ACCEPTED ("+cqi+")":"REJECTED ("+cqi+")";g.className="kpi-val "+(q>=0.65?"pass":"fail");
-cx.clearRect(0,0,880,240);cx.strokeStyle="#cbd5e1";cx.beginPath();cx.moveTo(0,120);cx.lineTo(880,120);cx.stroke();
-cx.strokeStyle=q>=0.65?"#082c3c":"#b91c1c";cx.lineWidth=2;cx.beginPath();
-for(let x=0;x<880;x++){const t=3+(x/880)*25,y=(r*Math.exp(-Math.pow((t-5.8)/.85,2))+b*Math.exp(-Math.pow((t-16)/.95,2)))*Math.sin(2*Math.PI*1.7*t);x===0?cx.moveTo(x,120-y*9.5):cx.lineTo(x,120-y*9.5)}cx.stroke()}sl.oninput=draw;draw();
-function audit(n,txt){const rows=txt.trim().split(/\r?\n/).slice(1);let mr=0,mb=0;for(const l of rows){const a=l.split(","),t=+a,v=Math.abs(+a);if(t>=4.5&&t<=7.5&&v>mr)mr=v;if(t>=14&&t<=22&&v>mb)mb=v}
-const rat=mr>0?(mb/mr).toFixed(3):"N/A";document.getElementById("out").textContent="File: "+n+" | Bulk/Boundary Ratio: "+rat+" | Verdict: "+(mb>mr*0.8?"PASS (Valid Coupling)":"REJECT (Interfacial Air-Gap Signature)");}
-function demo(g){sl.value=g?100:0;draw();audit(g?"e001_sim_assisted.csv":"e001_sim_unassisted.csv",g?"t,p\n5.8,1800\n16.0,4370":"t,p\n5.8,10200\n16.0,1050");}
-document.getElementById("fi").onchange=e=>{const f=e.target.files;if(!f)return;const rd=new FileReader();rd.onload=ev=>audit(f.name,ev.target.result);rd.readAsText(f);};</script></body></html>
+<nav aria-label="Footer navigation"><a href="overview.html">Venture overview</a><a href="research-library.html">Research library</a><a href="check.html">CQI Simulator</a><a href="https://doi.org" target="_blank" rel="noopener">Zenodo Benchmark (DOI) &#8599;</a><a href="https://github.com" target="_blank" rel="noopener">Research on GitHub &#8599;</a><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn &#8599;</a><a href="https://github.com/blob/main/LICENSE.md" target="_blank" rel="noopener">Rights &amp; licensing &#8599;</a></nav></div>
+<div class="footer-bottom"><span>&copy; 2026 M/s Endorys (Udyam MSME: UDYAM-KR-03-0786660) &middot; Bengaluru, India &middot; Patent Pending (IN 202641134091)</span><span>Research-stage programme. ENDORYS&trade; is a trademark of Sadhu Shobab Bollipo trading as M/s Endorys. No clinical medical device is currently marketed.</span></div></div></footer>
+</body></html>
