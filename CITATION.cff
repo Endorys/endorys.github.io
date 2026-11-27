@@ -5,6 +5,7 @@ type: software
 authors:
   - family-names: "Bollipo"
     given-names: "Sadhu Shobab"
+    orcid: "https://orcid.org"
     affiliation: "M/s Endorys (UDYAM-KR-03-0786660)"
     city: "Bengaluru"
     country: "IN"
