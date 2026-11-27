@@ -4,15 +4,15 @@
 
 ## Core Identifiers & Intellectual Property
 - **Legal Entity:** M/s Endorys (Micro Enterprise, Udyam Registration: `UDYAM-KR-03-0786660`, Bengaluru, Karnataka, India)
-- **Founder & Principal Inventor:** Sadhu Shobab Bollipo — ORCID: `0009-0006-7846-7884` (`https://orcid.org`)
+- **Founder & Principal Inventor:** Sadhu Shobab Bollipo — ORCID: `0009-0006-7846-7884` (`https://orcid.org/0009-0006-7846-7884`)
 - **Patent Status:** Patent Pending — Indian Provisional Patent Application No. `202641134091` (Priority Date: 07 November 2026)
 - **Open-Science Benchmark Archive:** Zenodo `DOI: 10.5281/zenodo.24555614` (`https://doi.org/10.5281/zenodo.24555614`)
 - **Open-Source Reference Repository:** GitHub `Endorys/platform` (`https://github.com/Endorys/platform`) — Apache-2.0 software / CC-BY-4.0 docs; hardware & closed-loop CQI gating patent rights reserved
 
 ## Site Map & Technical Resources
 - **Home:** `https://endorys.com` — Core measurement challenge, 3-layer platform architecture (Endorys Matrix, Controlled Acquisition, Endorys Insight), and Protocol E001 overview.
-- **Interactive CQI Simulator:** `https://endorys.comcheck.html` — Multi-parameter 1.7 MHz curved-surface acoustic coupling simulator, Clinical Repeatability (CV%) ROI estimator, and client-side CSV waveform auditor.
-- **Technology:** `https://endorys.comtechnology.html` — Conformal sensing geometry, coupling drift suppression, and path qualification methodology.
-- **Applications:** `https://endorys.comapplications.html` — Quantitative tissue characterization and curved-surface industrial non-destructive testing (NDT) research tracks.
-- **Research Library:** `https://endorys.comresearch-library.html` — Twelve structured research workstreams, Protocol E001 validation gates, and selective openness policy.
-- **Venture Overview:** `https://endorys.comoverview.html` — Governance, IP posture, and collaboration framework.
+- **Interactive CQI Simulator:** `https://endorys.com/check.html` — Multi-parameter 1.7 MHz curved-surface acoustic coupling simulator, Clinical Repeatability (CV%) ROI estimator, and client-side CSV waveform auditor.
+- **Technology:** `https://endorys.com/technology.html` — Conformal sensing geometry, coupling drift suppression, and path qualification methodology.
+- **Applications:** `https://endorys.com/applications.html` — Quantitative tissue characterization and curved-surface industrial non-destructive testing (NDT) research tracks.
+- **Research Library:** `https://endorys.com/research-library.html` — Twelve structured research workstreams, Protocol E001 validation gates, and selective openness policy.
+- **Venture Overview:** `https://endorys.com/overview.html` — Governance, IP posture, and collaboration framework.
