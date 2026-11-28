@@ -87,9 +87,35 @@ function copyEndorysBibtex() {
     </div>
   </div>
 </section>
+<section class="shell content-section" style="margin-top:1.5rem">
+  <div style="background:#f7fbfb;border:1px solid #d0e2e2;border-radius:14px;padding:1.5rem">
+    <span class="eyebrow">OPEN-SCIENCE &amp; INTEROPERABILITY TOOLKIT &middot; PROTOCOL E001 (v0.1.1)</span>
+    <h2 style="margin:.35rem 0 .65rem">Reference Software, 3D-Printable Phantom CAD &amp; Regulatory Matrix</h2>
+    <p style="color:#334155;margin-bottom:1rem">Executable reference implementations and open-hardware test fixtures available in <a href="https://github.com/Endorys/platform" target="_blank" rel="noopener">Endorys/platform &#8599;</a> (<a href="https://doi.org/10.5281/zenodo.24555614" target="_blank" rel="noopener">Zenodo DOI: 10.5281/zenodo.24555614 &#8599;</a>):</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem">
+      <div style="background:#fff;border:1px solid #d5e6e6;border-radius:10px;padding:1rem">
+        <strong>1. DICOM TID 1500 SR Exporter</strong>
+        <p style="font-size:.9rem;color:#475569;margin:.4rem 0 0"><code>research/dicom_sr_exporter.py</code> &mdash; Serializes CQI-gated Speed-of-Sound (m/s) and attenuation biomarkers into DICOMweb PS3.18 Structured Reports.</p>
+      </div>
+      <div style="background:#fff;border:1px solid #d5e6e6;border-radius:10px;padding:1rem">
+        <strong>2. 3D-Printable Curved Phantom (OpenSCAD)</strong>
+        <p style="font-size:.9rem;color:#475569;margin:.4rem 0 0"><code>hardware/phantoms/endorys_curved_phantom.scad</code> &mdash; Parametric R=35/60/90 mm tissue-mimicking phantom molds &amp; 6-element probe cradle (CC-BY-4.0).</p>
+      </div>
+      <div style="background:#fff;border:1px solid #d5e6e6;border-radius:10px;padding:1rem">
+        <strong>3. MCP Diagnostic Server &amp; QIBA Presets</strong>
+        <p style="font-size:.9rem;color:#475569;margin:.4rem 0 0"><code>research/mcp_cqi_server.py</code> &amp; <code>phantom_presets.py</code> &mdash; JSON-RPC 2.0 AI agent tool interface and CIRS 040GSE / QIBA PEQUS acoustic reference profiles.</p>
+      </div>
+      <div style="background:#fff;border:1px solid #d5e6e6;border-radius:10px;padding:1rem">
+        <strong>4. Global Regulatory Equivalence Matrix</strong>
+        <p style="font-size:.9rem;color:#475569;margin:.4rem 0 0"><code>docs/regulatory/GLOBAL_REGULATORY_MATRIX.md</code> &mdash; Cross-jurisdictional mapping across US FDA, EU MDR, Japan PMDA, and India CDSCO under IEC 60601-2-37:2024.</p>
+      </div>
+    </div>
+  </div>
+</section>
 <footer class="footer"><div class="shell"><div class="footer-top"><div><a class="brand" href="index.html"><img src="endorys-icon.png" alt="" width="30" height="30"><span>ENDORYS&trade;</span></a><p>Engineering deeper tissue understanding.</p></div>
 <nav aria-label="Footer navigation"><a href="overview.html">Venture overview</a><a href="research-library.html">Research library</a><a href="check.html">CQI Simulator</a><a href="https://doi.org/10.5281/zenodo.24555614" target="_blank" rel="noopener">Zenodo Benchmark (DOI) &#8599;</a><a href="https://github.com/Endorys/platform" target="_blank" rel="noopener">Research on GitHub &#8599;</a><a href="https://linkedin.com/company/endorys/" target="_blank" rel="noopener">LinkedIn &#8599;</a><a href="https://github.com/Endorys/platform/blob/main/LICENSE.md" target="_blank" rel="noopener">Rights &amp; licensing &#8599;</a></nav></div>
 <div class="footer-bottom"><span>&copy; 2026 M/s Endorys (Udyam MSME: UDYAM-KR-03-0786660) &middot; Bengaluru, India &middot; Patent Pending (IN 202641134091)</span><span>Research-stage programme. ENDORYS&trade; is a trademark of Sadhu Shobab Bollipo trading as M/s Endorys. No clinical medical device is offered for sale.</span></div></div></footer>
 
 </body></html>
+
 
